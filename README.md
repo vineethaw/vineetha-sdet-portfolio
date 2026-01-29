@@ -1,1 +1,2 @@
-# vineetha-sdet-portfolio
+# Vineetha Portfolio
+Deploy-ready Next.js portfolio.
