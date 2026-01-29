@@ -1,10 +1,20 @@
 import './globals.css';
+import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Vineetha Wilson | Senior QA Automation Engineer',
   description:
-    'Senior QA Automation Engineer & QA Team Lead with 6+ years of experience in Playwright, Selenium, WebDriverIO, API automation, and CI/CD.',
+    'Senior QA Automation Engineer & QA Team Lead specializing in Playwright, Selenium, WebDriverIO, API automation, and CI/CD.',
+  keywords: [
+    'QA Automation Engineer UAE',
+    'Playwright Automation',
+    'Selenium Automation',
+    'WebDriverIO',
+    'QA Team Lead',
+    'SDET Portfolio',
+    'Dubai QA Engineer'
+  ],
   openGraph: {
     title: 'Vineetha Wilson | Senior QA Automation Engineer',
     description:
@@ -29,6 +39,13 @@ export const metadata: Metadata = {
       'QA Automation Lead | Playwright | Selenium | WebDriverIO | CI/CD',
     images: ['/og-image.png'],
   },
+  alternates: {
+    canonical: 'https://vineetha-sdet-portfolio.vercel.app',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -37,8 +54,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
