@@ -1,1 +1,70 @@
-body { margin:0; font-family: Inter, sans-serif; background:#0b0b0f; color:#e5e7eb; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------
+   Global resets & base styling
+------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0b0f;
+  color: #e5e7eb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent anchor jump hiding content under fixed navbar */
+section {
+  scroll-margin-top: 96px; /* height of navbar + spacing */
+}
+
+/* Headings tuning (closer to modern portfolio look) */
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+/* Subtle link hover polish */
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+/* Buttons (if you add more later) */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Selection color (premium feel) */
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Scrollbar (optional, modern look) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a33;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a45;
+}
