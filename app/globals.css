@@ -2,32 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* -----------------------------
-   Global resets & base styling
------------------------------- */
-
+/* Base */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #0b0b0f;
+  background-color: #0b0b12;
   color: #e5e7eb;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Prevent anchor jump hiding content under fixed navbar */
+/* Prevent anchor links hiding under fixed navbar */
 section {
-  scroll-margin-top: 96px; /* height of navbar + spacing */
+  scroll-margin-top: 96px;
 }
 
-/* Headings tuning (closer to modern portfolio look) */
+/* Headings */
 h1, h2, h3, h4 {
   letter-spacing: -0.02em;
 }
 
-/* Subtle link hover polish */
+/* Links */
 a {
   transition: color 0.2s ease, opacity 0.2s ease;
 }
@@ -36,28 +33,28 @@ a:hover {
   opacity: 0.9;
 }
 
-/* Buttons (if you add more later) */
+/* Buttons */
 button {
   transition: all 0.2s ease;
 }
 
-button:hover {
-  transform: translateY(-1px);
+/* Micro-interactions */
+.micro {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Selection color (premium feel) */
-::selection {
-  background: #ffffff;
-  color: #000000;
+.micro:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Scrollbar (optional, modern look) */
+/* Scrollbar (modern look) */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0b0f;
+  background: #0b0b12;
 }
 
 ::-webkit-scrollbar-thumb {
